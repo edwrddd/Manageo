@@ -1,0 +1,7 @@
+[
+    {
+        "method": "post",
+        "url": "authenticate",
+        "file": "authenticate.js"
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "routes": ["/", "/login"],
+        "file": "login.html"
+    },
+    {
+        "routes": ["/home"],
+        "file": "home.html",
+        "auth": true
+    },
+    {
+        "routes": ["/activity"],
+        "file": "activity.html",
+        "auth": true
+    }
+]

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+        <title>Manageo</title>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <div class="modal modal-signin d-block bg-dark" tabindex="-1" data-bs-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Login</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                            You must be invited to join this webpanel.
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        <div id="placeholder"></div>
+                        <p>Please login to access this site.</p>
+                        <form class="login-form">
+                            <div class="form-floating mb-3">
+                                <input type="name" class="form-control" id="username" placeholder="Roblox Username">
+                                <label for="username" class="form-label">Username</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                                <label for="password" class="form-label">Password</label>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="rememberCheck">
+                                <label id="rememberCheckLabel" for="rememberCheck">Remember Me</label>
+                            </div>
+                            <button type="button" class="btn btn-success w-100 btn-lg" id="loginButton">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            const alertTemplate = document.getElementById("placeholder");
+            const formButton = document.getElementById("loginButton");
+
+            const alert = (message, type) => {
+                let wrapper = document.createElement('div')
+                wrapper.innerHTML = [
+                    `<div class="alert alert-${type} alert-dismissible fade show" role="alert">`,
+                    `   <div>${message}</div>`,
+                    '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                    '</div>'
+                ].join('')
+
+                placeholder.append(wrapper)
+            }
+
+            const request = (options, callback, fallback) => {
+                let connection = new XMLHttpRequest();
+                connection.addEventListener("load", () => {
+                    if (connection.status == 200) {
+                        callback(connection);
+                    } else if(connection.status === 401) {
+                        alert("Incorrect username or password.", "warning");
+                    } else {
+                        fallback();
+                    }
+                })
+                connection.addEventListener("error", fallback);
+
+                connection.open(options.method, options.url);
+                connection.setRequestHeader("Content-Type", "application/json");
+                connection.send(options.data)
+            }
+
+            formButton.addEventListener('click', async(event) => {
+                var data = {}
+
+                data.UserName = document.getElementById("username").value;
+                data.Password = document.getElementById("password").value;
+                data.LongSession = document.getElementById("rememberCheck").checked;
+                if (data.UserName !== "" && data.Password !== "") {
+                    request({
+                        url: document.location.origin + "/api/authenticate",
+                        method: "POST",
+                        data: JSON.stringify(data)
+                    }, async() => {
+                        document.location.replace(document.location.origin + "/home");
+                    }, async() => {
+                        alert("Authentication request failed, please try again.", "danger")
+                    })
+                } else {
+                    alert("Please fill out your username and password.", "danger")
+                }
+            })
+        </script>
+    </body>
+</html>

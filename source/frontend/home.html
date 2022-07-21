@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+        <title>Manageo</title>
+    </head>
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <div class="d-flex flex-column flex-shrink-0 p-3 bg-white shadow-lg vh-100 position-absolute" style="width: 280px;">
+            <ul class="nav nav-pills flex-column mb-auto">
+                <li class="nav-item">
+                    <a href="/home" class="nav-link active align-middle d-flex" aria-current="page">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" fill="currentColor" class="bi bi-house-door-fill align-middle d-flex me-2" viewBox="0 0 16 16">
+                            <path d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"/>
+                        </svg>
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/messages" class="nav-link link-dark d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" fill="currentColor" class="bi bi-chat-fill align-middle d-flex me-2" viewBox="0 0 16 16">
+                            <path d="M8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6-.097 1.016-.417 2.13-.771 2.966-.079.186.074.394.273.362 2.256-.37 3.597-.938 4.18-1.234A9.06 9.06 0 0 0 8 15z"/>
+                        </svg>
+                        Messages
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/profile" class="nav-link link-dark d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" fill="currentColor" class="bi bi-person-fill align-middle d-flex me-2" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        Profile
+                    </a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                    <a href="/activity" class="nav-link link-dark d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" fill="currentColor" class="bi bi-calendar-check-fill d-flex me-2" viewBox="0 0 16 16">
+                            <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4V.5zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2zm-5.146-5.146-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+                        </svg>
+                        Activity
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/sessions" class="nav-link link-dark d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" fill="currentColor" class="bi bi-person-fill align-middle d-flex me-2" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        Sessions
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/assignments" class="nav-link link-dark d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" fill="currentColor" class="bi bi-person-fill align-middle d-flex me-2" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        Assignments
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/partners" class="nav-link link-dark d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" fill="currentColor" class="bi bi-person-fill align-middle d-flex me-2" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        Partners
+                    </a>
+                </li>
+                <hr>
+                <li class="nav-item">
+                    <a href="/bans" class="nav-link link-dark d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" fill="currentColor" class="bi bi-person-fill align-middle d-flex me-2" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        Manage Bans
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="/review" class="nav-link link-dark d-flex">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" fill="currentColor" class="bi bi-person-fill align-middle d-flex me-2" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        Review Notices
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <div class="dropdown bottom-0">
+                <a href="#" class="d-flex align-items-center link-dark dropdown-toggle text-decoration-none" id="sideUser" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://www.roblox.com/headshot-thumbnail/image?userId=72226341&width=420&height=420&format=png" width="30px" height="30px" class="rounded-circle me-2 userimage-input">
+                    <strong class="username-input">%username</strong>
+                </a>
+                <ul class="dropdown-menu text-small shadow" aria-labelledby="sideUser">
+                    <li>
+                        <a class="dropdown-item" href="/account">Settings</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="/support">Support</a>
+                    </li>
+                    <li>
+                        <hr class="dropdown-divider" href="#"></hr>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="/logout">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="page" style="margin-left: 280px;">
+            <div class="bg-primary p-5 shadow">
+                <img class="rounded-circle userimage-input mb-4" height="108px"; width="108px"; src="https://www.roblox.com/headshot-thumbnail/image?userId=72226341&width=420&height=420&format=png">
+                <div class="">
+                    <h2 class="text-white username-input">Welcome, %username!</h2>
+                    <p class="text-white">Something goes here, but I'm not really sure.</p>
+                </div>
+            </div>
+            <div class="p-5">
+                <div class="row row-cols-4">
+                    <div class="card border-success ms-3 me-3 p-2" id="progress-card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Quota Progress
+                            </5>
+                            <div class="progress mt-3 shadow-lg" style="height: .5rem">
+                                <div class="progress-bar bg-success" role="progressbar" aria-label="Quota Progress" aria-valuenow="80" aria-minvalue="0" aria-maxvalue="100" style="width: 80%"></div> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card border-dark ms-3 me-3 p-2" id="activity-card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Weekly Activity
+                            </h5>
+                            <p class="card-text text-muted">
+                                1 hour, 10 minutes
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card border-danger ms-3 me-3 p-2" id="activity-card">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                Infractions
+                            </h5>
+                            <p class="card-text text-muted">
+                                0 logged warnings
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ps-5 pe-5">
+                <p class="fs-4 fw-semibold mb-3">News</p>
+                
+            </div>
+        </div>
+        <div class="toast-container p-3" id="toast-holder"></div>
+        <script type="text/javascript">
+            const toastHolder = document.getElementById("toast-holder");
+
+            const toast = async (message, type) => {
+                return new Promise(async (resolve, reject) => {
+                    let wrapper = document.createElement('div')
+                    let wrapperId = crypto.randomUUID()
+                    wrapper.innerHTML = [
+                        `<div class="toast align-items-center text-bg-${type} border-0 end-0 top-0 p-2 m-3 position-fixed text-white" role="alert" aria-live="assertive" aria-atomic="true" id="${wrapperId}">`,
+                            `<div class="d-flex">`,
+                                `<div class="toast-body">`,
+                                    `${message}`,
+                                `</div>`,
+                                `<button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>`,
+                            `</div>`,
+                        `</div>`
+                    ].join('')
+
+                    toastHolder.append(wrapper)
+                    return resolve(wrapperId)
+                })
+            }
+
+            document.querySelectorAll(".username-input").forEach(element => {
+                let toReplace = element.innerHTML
+                element.innerHTML = toReplace.replace("%username", "eeee")
+            })
+
+            /*document.querySelectorAll(".userimage-input").forEach(element => {
+                element.src = `https://www.roblox.com/headshot-thumbnail/image?userId=&amp;width=420&amp;height=420&amp;format=png`
+            })*/
+
+            const ready = async() => {
+                let joinToast = await toast("This site is currently in beta.", "warning")
+                let joinToastElement = new bootstrap.Toast(document.getElementById(joinToast))
+                joinToastElement.show()
+            }
+
+            document.addEventListener("DOMContentLoaded", ready);
+        </script>
+    </body>
+</html>
